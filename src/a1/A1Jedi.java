@@ -25,14 +25,20 @@ public class A1Jedi {
 			String first_name = scan.next();
 			String last_name = scan.next();
 			int per_num_fruits = scan.nextInt();
+			int [] temp_count = new int[num_fruits];
 			for (int j=0; j<per_num_fruits; j++) {
 				int num_fruits_buy = scan.nextInt();
 				String fruits_buy = scan.next();
 				
 				int temp_index = returnIndex(all_fruits, fruits_buy);
-				customer_count[temp_index] += 1;
+				temp_count[temp_index] = 1;
 				customer_fruits_count[temp_index] += num_fruits_buy;
+				
 			}
+		    for (int k=0; k<customer_count.length; k++) {
+		    	customer_count[k] += temp_count[k];
+		    }
+			
 		}
 			
 		for (int i=0; i<num_fruits; i++) {
