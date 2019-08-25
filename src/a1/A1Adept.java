@@ -37,13 +37,17 @@ public class A1Adept {
 		
 		int index_largest = findValueMax(customer_total_prices);
 		int index_smallest = findValueMin(customer_total_prices);
-		System.out.println("Biggest: " + customer_names[index_largest] + " " + customer_total_prices[index_largest]);
-		System.out.println("Smallest: " + customer_names[index_smallest] + " " + customer_total_prices[index_smallest]);
-		System.out.println("Average: " + calculateValueMean(customer_total_prices));
+		System.out.println("Biggest: " + customer_names[index_largest] + " " + round(customer_total_prices[index_largest]));
+		System.out.println("Smallest: " + customer_names[index_smallest] + " " + round(customer_total_prices[index_smallest]));
+		System.out.println("Average: " + round(calculateValueMean(customer_total_prices)));
 		}
 
 		// Your code follows here.
+	static double round(double number) {
 		
+		return Math.round(number*100.0)/100.0;
+		
+	}	
 	
 	static int returnIndex(String[] all_fruits, String fruits_buy) {
 
