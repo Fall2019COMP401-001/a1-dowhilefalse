@@ -35,7 +35,7 @@ public class A1Novice {
 		
 	}
 	static String round(double number) {
-		DecimalFormat df = new DecimalFormat("#.00");
+		DecimalFormat df = new DecimalFormat("0.00");
 		return df.format(number);
 //		return Math.round(number*100.0)/100.0;
 		
