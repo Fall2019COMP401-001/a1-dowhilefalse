@@ -1,6 +1,7 @@
 package a1;
 
 import java.util.Scanner;
+import java.text.DecimalFormat; 
 
 public class A1Novice {
 
@@ -33,9 +34,10 @@ public class A1Novice {
 		}
 		
 	}
-	static double round(double number) {
-		
-		return Math.round(number*100.0)/100.0;
+	static String round(double number) {
+		DecimalFormat df = new DecimalFormat("#.00");
+		return df.format(number);
+//		return Math.round(number*100.0)/100.0;
 		
 	}	
 }
